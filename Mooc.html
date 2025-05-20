@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MOOC Ingeniería Económica</title>
+  <style>
+    :root {
+      --color-principal: #800000;
+      --color-secundario: #f9f9f9;
+      --color-acento: #00aaff;
+      --color-texto: #333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--color-secundario);
+      color: var(--color-texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--color-principal);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+    }
+
+    .menu-btn {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+      transition: transform 0.3s ease;
+    }
+
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        flex-direction: column;
+        background-color: var(--color-principal);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        padding: 1rem;
+      }
+
+      nav.active {
+        display: flex;
+        animation: slideDown 0.3s ease-in-out;
+      }
+
+      @keyframes slideDown {
+        from { opacity: 0; transform: translateY(-10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    section:hover {
+      transform: translateY(-4px);
+    }
+
+    h2 {
+      color: var(--color-principal);
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      color: var(--color-acento);
+      margin-bottom: 0.5rem;
+    }
+
+    .image-placeholder img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain; 
+  border-radius: 8px;
+}
+
+    p {
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>MOOC Ingeniería Económica</h1>
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+  <nav id="menu">
+    <a href="#perfil">Perfil</a>
+    <a href="#modulo1">Módulo 1</a>
+    <a href="#modulo2">Módulo 2</a>
+    <a href="#modulo3">Módulo 3</a>
+    <a href="#modulo4">Módulo 4</a>
+    <a href="#modulo5">Módulo 5</a>
+    <a href="#modulo6">Módulo 6</a>
+    <a href="#conclusion">Conclusión</a>
+  </nav>
+</header>
+
+<main>
+  <section id="perfil">
+    <h2>Daniel Jimenez Salcedo</h2>
+    <p>A continuacion, se muestra el perfil creado en Coursera</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 110304.png"></div>
+    <h3>Curso: Finanzas Personales</h3>
+    <p><strong>Bienvenida:</strong></p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-20 104207.png"></div>
+  </section>
+
+  <section id="modulo1">
+    <h2>Módulo 1: Presupuesto Familiar</h2>
+    <p>Lección destinada a hablar sobre el presupuesto familiar y aspectos a tener en cuenta sobre el mismo, todo esto con el fin de mantener buena estabilidad economica en el hogar.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 110628.png"></div>
+    <p>Luego de ver los videos y realizar las lecturas, se realizó el test relacionada al módulo.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 105359.png"></div>
+  </section>
+
+  <section id="modulo2">
+    <h2>Módulo 2: Ahorro</h2>
+    <p>Lección destinada al ahorro y brinda características esenciales del mismo, con el objetivo de llevar a cabo un buen ahorro.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 110016.png"></div>
+    <p>Luego de ver los videos del módulo, se realizó la actividad relacionada a ellos.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 111625.png"></div>
+  </section>
+
+  <section id="modulo3">
+    <h2>Módulo 3: Inversión</h2>
+    <p>Lección destinada a hablar de la inversión, sus riesgos, beneficios y diferentes perfiles.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 110016.png"></div>
+    <p>Luego de ver todos los videos, se realizó la actividad relacionada a la inversión.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 113111.png"></div>
+  </section>
+
+  <section id="modulo4">
+    <h2>Módulo 4: Crédito</h2>
+    <p>Lección destinada al crédito, en la que nos dan recomendaciones y aspectos a tener en cuenta antes de solicitar uno.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 113741.png"></div>
+    <p>Luego de ver todos los videos, se realizó la actividad relacionada al tema de crédito.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 114657.png"></div>
+  </section>
+
+  <section id="modulo5">
+    <h2>Módulo 5: Seguros</h2>
+    <p>Lección destinada a hablar sobre los seguros, entes dedicados a respaldar a una persona cubriendo los riesgos en un crédito.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 115718.png"></div>
+    <p>Luego de ver los videos de Aseguradora, se realizó el test del módulo.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 120048.png"></div>
+  </section>
+
+  <section id="modulo6">
+    <h2>Módulo 6: Consumo Responsable</h2>
+    <p>Lección destinada al consumo responsable, en la que nos hablan de cómo manejar de forma responsable nuestros ingresos, tanto en la parte económica, como en el impacto ambiental.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 194620.png"></div>
+    <p>Luego de ver los videos, se realizó el test pertinente al tema.</p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\Captura de pantalla 2025-05-19 202217.png"></div>
+  </section>
+
+  <section id="conclusion">
+    <h2>Conclusión</h2>
+    <p>Para concluir, este curso me brindó información y me llenó de conocimientos para tener un mejor manejo de mi dinero, tanto si lo quiero ahorrar, invertir, y cómo hacer uso de ello de manera responsable.</p>
+    <p><strong>Resumen de lo visto (Brindado por Coursera)</strong></p>
+    <div class="image-placeholder"><img src="C:\Users\danie\OneDrive\Escritorio\PaginaMooc\moocfinanzas_conclusion_f.png"></div>
+  </section>
+</main>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
